@@ -1,0 +1,434 @@
+/* Dashboard Main Container */
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #18171d 0%, #23212b 100%);
+  color: #fff;
+  padding: 32px 0 80px 0;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* User Greeting */
+.user-greeting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 0 24px;
+}
+.greeting-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.greeting-sub {
+  font-size: 1rem;
+  color: #bdbdbd;
+}
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  background: #ff914d;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Upcoming Trip Card */
+.upcoming-trip-card {
+  margin: 0 24px 18px 24px;
+}
+.trip-image {
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  padding: 20px 20px 16px 20px;
+  position: relative;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.trip-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trip-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.trip-seeall-btn {
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trip-dates {
+  font-size: 1rem;
+  margin: 8px 0 0 0;
+  color: #e0e0e0;
+}
+.trip-stats {
+  display: flex;
+  gap: 18px;
+  font-size: 0.95rem;
+  margin-top: 8px;
+  color: #d1fae5;
+}
+
+/* Flight Details Card */
+.flight-details-card {
+  position: relative;
+  background-color: #3a2fff; /* example color */
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.plane-icon {
+  position: absolute;
+  bottom: -120px;
+  right: -50px;
+  width: 300px;
+  transform: rotate(0deg);
+  opacity: 0.6;
+  pointer-events: none; /* so it doesn't block clicks */
+}
+
+
+.flight-details-card {
+  background: #3b36ff;
+  color: #fff;
+  border-radius: 14px;
+  margin: 0 24px 18px 24px;
+  padding: 18px 20px 14px 20px;
+}
+.flight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.seeall-btn {
+  background: none;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+.flight-info {
+  margin-top: 10px;
+}
+.flight-route {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  gap: 8px;
+}
+.flight-from, .flight-to {
+  color: #fff;
+}
+.flight-arrow {
+  color: #fff;
+}
+.flight-meta {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  margin: 4px 0;
+  display: flex;
+  gap: 8px;
+}
+.flight-date {
+  font-size: 0.95rem;
+  color: #d1fae5;
+}
+
+/* Accommodation Section */
+.accommodation-section {
+  margin: 0 24px 18px 24px;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.accommodation-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+}
+.accommodation-card {
+  background: #23212b;
+  border-radius: 12px;
+  min-width: 180px;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.accommodation-img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+}
+.accommodation-info {
+  padding: 10px 12px 12px 12px;
+}
+.hotel-name {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+.hotel-dates {
+  font-size: 0.92rem;
+  color: #bdbdbd;
+  margin-bottom: 4px;
+}
+.hotel-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.92rem;
+}
+.hotel-status {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.hotel-status.confirmed {
+  background: #d1fae5;
+  color: #065f46;
+}
+.hotel-status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Activities Section */
+.activities-scroll {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.activities-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.activities-section {
+  margin: 0 24px 18px 24px;
+}
+.day-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+  overflow-x: auto;
+}
+.day-tab {
+  background: #23212b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.day-tab.active, .day-tab:hover {
+  background: #3b36ff;
+  color: #fff;
+}
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.activity-card {
+  background: #23212b;
+  border-radius: 10px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 10px 10px 10px;
+}
+.activity-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.activity-info {
+  flex: 1;
+}
+.activity-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+.activity-meta {
+  font-size: 0.92rem;
+  color: #bdbdbd;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Wrapper to center the navbar */
+.bottom-nav-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  background: transparent; 
+}
+
+.bottom-nav {
+  background: #23212b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #bdbdbd;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.nav-btn.active, .nav-btn:hover {
+  color: #3b36ff;
+}
+
+/* Third Pane Modal */
+.third-pane-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.third-pane-modal {
+  background: #fff;
+  color: #18171d;
+  border-radius: 16px;
+  padding: 32px 24px 24px 24px;
+  min-width: 320px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #3b36ff;
+  cursor: pointer;
+}
+.third-pane-content h3 {
+  margin-top: 0;
+}
+
+/* Light Theme */
+.dashboard-container.light {
+  background: linear-gradient(180deg, #f8fafc 0%, #f3f4f6 100%);
+  color: #18171d;
+}
+.dashboard-container.light .user-greeting .greeting-title,
+.dashboard-container.light .user-greeting .greeting-sub {
+  color: #18171d;
+}
+.dashboard-container.light .upcoming-trip-card .trip-title {
+  color: #18171d;
+}
+.dashboard-container.light .trip-image {
+  background-blend-mode: lighten;
+}
+.dashboard-container.light .trip-seeall-btn {
+  background: rgba(255,255,255,0.7);
+  color: #3b36ff;
+}
+.dashboard-container.light .trip-dates,
+.dashboard-container.light .trip-stats {
+  color: #3b36ff;
+}
+.dashboard-container.light .flight-details-card {
+  background: #6366f1;
+  color: #fff;
+}
+.dashboard-container.light .accommodation-card,
+.dashboard-container.light .activity-card {
+  background: #fff;
+  color: #18171d;
+}
+.dashboard-container.light .hotel-dates,
+.dashboard-container.light .activity-meta {
+  color: #6c6c6c;
+}
+.dashboard-container.light .bottom-nav {
+  background: #fff;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+}
+.dashboard-container.light .nav-btn {
+  color: #6366f1;
+}
+.dashboard-container.light .nav-btn.active, .dashboard-container.light .nav-btn:hover {
+  color: #3b36ff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard-container {
+    padding: 16px 0 72px 0;
+    max-width: 100vw;
+  }
+  .upcoming-trip-card, .flight-details-card, .accommodation-section, .activities-section {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .third-pane-modal {
+    min-width: 90vw;
+    padding: 18px 8px 12px 8px;
+  }
+} 
