@@ -77,10 +77,10 @@ body, html {
 }
 
 select.onboarding-input {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: transparent;
+  /* appearance: none; */
+  /* -webkit-appearance: none; */
+  /* -moz-appearance: none; */
+  background-color: #18171d;
   color: #fff;
   cursor: pointer;
 }
@@ -187,4 +187,24 @@ select.onboarding-input {
     padding: 24px 8px;
     max-width: 100vw;
   }
-} 
+}
+
+select.onboarding-input option {
+  background-color: #18171d;
+  color: #fff;
+}
+
+select.onboarding-input option:hover {
+  background-color: #35343a;
+  color: #fff;
+}
+
+.select-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+select.onboarding-input {
+  position: relative;
+  z-index: 10;
+}
